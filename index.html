@@ -4,140 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Lawal- Rafiou</title>
-    <link rel="stylesheet" href="./style/styles.css">
+    <script src="./script/tailwindcss-3.4.1.js"></script>
+    <link rel="stylesheet" href="./style/fontawesome.all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgba(17, 16, 16, 0.932)',
+                        secondary: '#1e3a8a',
+                        tertiare: ' #24252A',
+                        accent: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
 <body>
-
-    <!-- Header of page -->
-    <header>
-        <img src="" alt="logo" class="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#projet">Projet</a></li>
-                <li><a href="#stack">Stack</a></li>
-            </ul>
-        </nav>
-        <a href="#contact" class="cta"><button >Contact</button></a>
-        <div id="menu-btn" class="fas fa-bars"></div>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="bg-primary text-white p-2 rounded-lg mr-3">
+                    <img src="" alt="logo" class="logo">
+                    <i class="fas fa-network-wired text-2xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-primary">Lawal <span class="text-secondary">Rafiou</span></h1>
+            </div>
+    
+            <!-- Navigation Mobile Button -->
+            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+    
+            <!-- Navigation Desktop -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-primary font-semibold hover:text-accent transition-all">Accueil</a>
+                <a href="#projet" class="text-gray-600 hover:text-accent transition-all">Blog</a>
+                <a href="#stack" class="text-gray-600 hover:text-accent transition-all">Stack</a>
+                <a href="#contact" class="text-gray-600 hover:text-accent transition-all">Contact</a>
+            </nav>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#" class="block py-2 text-primary font-semibold">Accueil</a>
+            <a href="#projet" class="block py-2 text-gray-600 hover:text-accent">Blog</a>
+            <a href="#stack" class="block py-2 text-gray-600 hover:text-accent">Stack</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-accent">Contact</a>
+        </div>
     </header>
 
     <div class="scroller"></div>
     <div class="container">
         <!-- Banier -->
-         <section class="sec__1" >
-            <div class="image">
-                <img src="./img/image.jpg" alt="lawal.image">
+         <section class="bg-primary text-white py-24 md:py-32 px-12 flex justify-between items-center flex-wrap md:w-full">
+            <div class="image w-full md:w-1/2">
+                <img src="./img/image.jpg" alt="lawal.image" class="w-full md:w-96 h-auto rounded-lg">
             </div>
-            <div class="right__div">
-                <h1 class="title"><span class="line-down">Lawal Rafiou</span></h1>
-                
-                <h3 class="subtitle">Développeur Web Full-Stack && API RestFull</h3>
-                <p class="intro">
-                    Développeur web Full‑Stack, spécialisé dans la création
-                    d’applications robustes et modernes , doté d'une solide
-                    formation en développement web acquise à Pointe-Noire.
-                    Capable de concevoir, développer et maintenir des applications
-                    web performantes en utilisant les technologies front-end et
-                    back-end les plus récentes
-                </p>
-                <button type="button" class="my__btn">En savoir plus</button>
+            <div class="right__div md:w-1/2">
+                <div id="divToChange">
+                    <h1 class="title text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Lawal <span class="text-secondary">Rafiou</span>
+                    </h1>
+                    <h3 class="subtitle text-md md:text-3xl font-bold mb-6 animate-fade-in">Développeur Web Full-Stack && API RestFull</h3>
+                    <p class="intro text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                        Développeur web Full‑Stack, spécialisé dans la création
+                        d’applications robustes et modernes , doté d'une solide
+                        formation en développement web acquise à Pointe-Noire.
+                        Capable de concevoir, développer et maintenir des applications
+                        web performantes en utilisant les technologies front-end et
+                        back-end les plus récentes
+                    </p>
+                </div>
+                <div id="divToCome" class="hidden">
+                    <h1 class="title text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Lawal <span class="text-secondary">Rafiou</span>
+                    </h1>
+                    <h3 class="subtitle text-md md:text-3xl font-bold mb-6 animate-fade-in">Développeur Web Full-Stack && API RestFull</h3>
+                    <p class="intro text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                        Plus d'information
+                    </p>
+                </div>
+                <button type="button" id="changeBtn" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">En savoir plus</button>
             </div>
         </section>
          <!-- Skill section -->
-          <section class="sec__2" id="stack">
-            <h2 class="skill">Mes Stacks</h2>
-            <div class="stack__div">
-                <div class="stack__1">
-                    <h4 class="subtitle">FRONT-END</h4>
-                    HTML5 <br>
-                    CSS3 <br>
-                    Javascript<br>
-                    React.js && React Native<br>
-                    TailwindCss<br>
+          <section class="sec__2 py-16 bg-gray-50" id="stack">
+            <h2 class="skill text-3xl font-bold text-primary mb-4 text-center">Mes Stacks</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <div class="stack__div flex flex-col md:flex-row items- p-4 gap-8">
+                <div class="stack__1 w-full space-y-6 md:w-1/2 bg-tertiare p-4 text-zinc-50 md:space-y-4 rounded-xl">
+                    <h4 class="subtitle text-zinc-100 text-xl md:text-2xl mb-8 max-w-3xl mx-auto">FRONT-END</h4>
+                    <div class="1 flex justify-around">HTML5 <progress value="9.5" max="10"></progress></div>
+                    <div class="1 flex justify-around">CSS3 <progress value="9.5" max="10"></progress></div>
+                    <div class="1 flex justify-around">Javascript <progress value="8.5" max="10"></progress></div>
+                    <div class="1 flex justify-around">React.js && React Native <progress value="7" max="10"></progress></div>
+                    <div class="1 flex justify-around">TailwindCss <progress value="9" max="10"></progress></div>
                 </div>
-                <div class="stack__2">
-                    <h4 class="subtitle">BACK-END</h4>
-                    PHP <br>
-                    NODE.js(express) <br>
-                    python3<br>
-                    SQL(MySQL,PostgreSQL)<br>
-                    NoSQL(MongoDB)<br>
+                <div class="stack__2 w-full space-y-6 md:w-1/2 bg-tertiare p-4 text-zinc-50 md:space-y-4 rounded-xl">
+                    <h4 class="subtitle text-zinc-100 text-xl md:text-2xl mb-8 max-w-3xl mx-auto">BACK-END</h4>
+                    <div class="1 flex justify-around">PHP  <progress value="6" max="10" class="bg-zinc-100 "></progress></div>
+                    <div class="1 flex justify-around">NODE.js(express)  <progress value="8.5" max="10"></progress></div>
+                    <div class="1 flex justify-around">python3  <progress value="7" max="10"></progress></div>
+                    <div class="1 flex justify-around">SQL(MySQL,PostgreSQL)  <progress value="9" max="10"></progress></div>
+                    <div class="1 flex justify-around">NoSQL(MongoDB)  <progress value="8.5" max="10"></progress></div>
                 </div>
             </div>
-            <div class="authers">
+            <div class="authers text-zinc-800 text-xl md:text-2xl mb-8 max-w-3xl mx-auto py-6">
                 Autres outils de travailles, Git, GitHub
             </div>
         </section>
         <!-- Projet Section -->
-        <section class="sec__3" id="projet">
-            <h2>My Top Projet</h2>
-            <div class="articles">
-                <div class="article">
-                    <img src="./img/image.jpg" alt="lawal.image">
-                    <h3>Projet name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi impedit corporis sint aspernatur nisi
-                    veritatis tenetur iste qui officiis veniam atque placeat, optio, natus esse. Animi qui adipisci placeat eos.</p>
-                    <p><a href="#" class="my__btn">Visitez le site</a></p>
+        <section class="sec__3 bg-tertiare py-6 px-4 rounded-b-full" id="projet">
+            <h2 class="text-3xl font-bold text-zinc-100 mb-4 text-center">My Top Projet</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <div class="articles flex flex-col md:flex-row items-center gap-8">
+                <div class="article w-full h-full">
+                    <img src="./img/image.jpg" alt="lawal.image" class="w-66 h-30 rounded-md shadow-lg">
+                    <h3 class="text-2xl font-bold text-zinc-100 my-4"><span class="md:text-tertiare">Projet name</span></h3>
+                    <p class="text-md text-zinc-50 md:text-xl mb-8 max-w-3xl mx-auto"><span class="md:text-tertiare">Lorem ipsum dolor </span>sit amet consectetur <span class="md:text-tertiare">adipisicing elit. Excep</span>turi impedit corporis <span class="md:text-tertiare">sint aspernatur nisi
+                    verita</span>tis tenetur iste qui<span class="md:text-tertiare"> officiis veniam atque placeat,</span> optio, natus <span class="md:text-tertiare">esse. Animi qui adipisci placeat e</span>os.</p>
+                    <p><a href="#" class="my__btn text-gray-200 hover:text-white md:text-gray-800 md:hover:text-black transition-all hover:underline">Visitez le site</a></p>
                 </div>
-                <div class="article">
-                    <img src="./img/image.jpg" alt="lawal.image">
-                    <h3>Projet name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi impedit corporis sint aspernatur nisi
+                <div class="article w-full h-full">
+                    <img src="./img/image.jpg" alt="lawal.image" class="w-66 h-30 rounded-md shadow-lg">
+                    <h3 class="text-2xl font-bold text-zinc-100 my-4">Projet name</h3>
+                    <p class="text-md text-zinc-50 md:text-xl mb-8 max-w-3xl mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi impedit corporis sint aspernatur nisi
                     veritatis tenetur iste qui officiis veniam atque placeat, optio, natus esse. Animi qui adipisci placeat eos.</p>
-                    <p><a href="#" class="my__btn">Visitez le site</a></p>
+                    <p><a href="#" class="my__btn text-gray-400 hover:text-white transition-all hover:underline">Visitez le site</a></p>
                 </div>
-                <div class="article">
-                    <img src="./img/image.jpg" alt="lawal.image">
-                    <h3>Projet name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi impedit corporis sint aspernatur nisi
-                    veritatis tenetur iste qui officiis veniam atque placeat, optio, natus esse. Animi qui adipisci placeat eos.</p>
-                    <p><a href="#" class="my__btn">Visitez le site</a></p>
+                <div class="article w-full h-full">
+                    <img src="./img/image.jpg" alt="lawal.image" class="w-66 h-30 rounded-md shadow-lg">
+                    <h3 class="text-2xl font-bold text-zinc-100 my-4">Projet name</h3>
+                    <p class="text-md text-zinc-50 md:text-xl mb-8 max-w-3xl mx-auto">Lorem ipsum dolor sit amet <span class="md:text-tertiare">consectetur</span> adipisicing elit. Exceptur<span class="md:text-tertiare">i impedit corporis</span> sint aspernatur nisi
+                    v<span class="md:text-tertiare">eritatis tenetur iste qui</span> officiis veniam at<span class="md:text-tertiare">que placeat, optio, natus</span> esse. Animi <span class="md:text-tertiare">qui adipisci placeat eos.</span></p>
+                    <p><a href="#" class="my__btn text-gray-800 hover:text-black transition-all hover:underline">Visitez le site</a></p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="sec__4" id="contact">
-            <h2>Me contactez</h2>
-           <div class="wrapper__sec__4">
-            <div class="contact__me">
-                <form action="" method="post">
-                    <input type="text" name="username" id="username" placeholder="Entrez votre nom" required >
-                    <input type="email" name="useremai" id="useremai" placeholder="Entrez votre email" required >
-                    <textarea name="message" id="message" placeholder="Votre message"></textarea>
-                    <button class="last__btn" type="submit">Envoyer</button>
-                </form>
-            </div>
-            <div class="boxes">
-                <div class="boxe">
-                    <h3>Contact</h3>
-                    <p>exemple2@gmail.com</p>
-                </div>
-                <div class="boxe">
-                    <h3>Contact</h3>
-                    <p>exemple2@gmail.com</p>
-                </div>
-                <div class="boxe">
-                    <h3>Contact</h3>
-                    <p>exemple2@gmail.com</p>
-                </div>
-                <div class="boxe">
-                    <h3>Projet</h3>
-                    <p>GitHub</p>
-                </div>
-                <div class="boxe">
-                    <h3>Whatsapp</h3>
-                    <p>+242123456789</p>
-                </div>
-                <div class="boxe">
-                    <h3>Location</h3>
-                    <p>Congo Brazzaville, Pointe-noire</p>
-                </div>
-            </div>
-           </div>
-        </section>
+          <section class="bg-white py-16 px-4" id="contact">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center text-blue-600">Me Contactez</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Mes coordonnées</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
+                                <p>Avenue de la Révolution à Pointe Noire, Congo Brazzaville</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-blue-500 mr-3"></i>
+                                <p>053330615 / 040481892</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-500 mr-3"></i>
+                                <p>lrafiou491@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
 
-    </div>
+                    <!-- Google Map -->
+                    <div class="h-64 rounded-lg overflow-hidden shadow-md">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.858370079287475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Envoyez-nous un message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-transparent border-2 border-tertiare hover:bg-tertiare hover:text-zinc-50 text-zinc-800 font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">
+                            Envoyer
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-tertiare text-white py-12 rounded-3xl">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Logo and description -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white text-primary p-2 rounded-lg mr-3">
+                            <i class="fas fa-network-wired text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Lawal Rafiou</h3>
+                    </div>
+                    <p class="text-gray-400">Experts en solutions intégrées informatiques .</p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4"> Autres Liens</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">GitHub</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">E-commerce App(Proto)</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">X</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Meta</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Solutions IT</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Développement Mobile, Web</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Formation web</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <address class="not-italic text-gray-400">
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+                            <p>Avenue de la Révolution à Pointe Noire<br>Congo Brazzaville</p>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone-alt mr-3 text-accent"></i>
+                            <p>053330615</p>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-whatsapp-square mr-3 text-accent"></i>
+                            <p>040481892</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-accent"></i>
+                            <p>lrafiou491@gmail.com</p>
+                        </div>
+                    </address>
+                </div>
+            </div>
+    
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 CV éléctronique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/main.js"></script>
 </body>
 </html>
