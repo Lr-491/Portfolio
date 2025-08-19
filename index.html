@@ -28,9 +28,8 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center">
-                <div class="bg-primary text-white p-2 rounded-lg mr-3">
-                    <img src="" alt="logo" class="logo">
-                    <i class="fas fa-network-wired text-2xl"></i>
+                <div class="bg-zinc-50 text-white p-2 rounded-lg mr-3">
+                    <img src="./img/image2.jpg" alt="logo" class="size-6 rounded-lg logo">
                 </div>
                 <h1 class="text-2xl font-bold text-primary">Lawal <span class="text-secondary">Rafiou</span></h1>
             </div>
@@ -63,7 +62,7 @@
         <!-- Banier -->
          <section class="bg-primary text-white py-24 md:py-32 px-12 flex justify-between items-center flex-wrap md:w-full">
             <div class="image w-full md:w-1/2">
-                <img src="./img/image.jpg" alt="lawal.image" class="w-full md:w-96 h-auto rounded-lg">
+                <img src="./img/image.png" alt="lawal.image" class="w-full md:w-96 h-auto object-cover">
             </div>
             <div class="right__div md:w-1/2">
                 <div id="divToChange">
@@ -94,57 +93,167 @@
           <section class="sec__2 py-16 bg-gray-50" id="stack">
             <h2 class="skill text-3xl font-bold text-primary mb-4 text-center">Mes Stacks</h2>
             <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-            <div class="stack__div flex flex-col md:flex-row items- p-4 gap-8">
-                <div class="stack__1 w-full space-y-6 md:w-1/2 bg-tertiare p-4 text-zinc-50 md:space-y-4 rounded-xl">
-                    <h4 class="subtitle text-zinc-100 text-xl md:text-2xl mb-8 max-w-3xl mx-auto">FRONT-END</h4>
-                    <div class="1 flex justify-around">HTML5 <progress value="9.5" max="10"></progress></div>
-                    <div class="1 flex justify-around">CSS3 <progress value="9.5" max="10"></progress></div>
-                    <div class="1 flex justify-around">Javascript <progress value="8.5" max="10"></progress></div>
-                    <div class="1 flex justify-around">React.js && React Native <progress value="7" max="10"></progress></div>
-                    <div class="1 flex justify-around">TailwindCss <progress value="9" max="10"></progress></div>
+                <div class="stack__div flex flex-col md:flex-row gap-8 p-4">
+                    <!-- FRONT-END -->
+                    <div class="stack__1 w-full md:w-1/2 bg-tertiare p-6 text-zinc-50 rounded-xl">
+                        <h4 class="text-zinc-100 text-2xl font-semibold mb-8 text-center">FRONT-END</h4>
+                
+                        <!-- HTML5 -->
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>HTML5</span><span>95%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="95"></div>
+                            </div>
+                        </div>
+                
+                        <!-- CSS3 -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>CSS3</span><span>95%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                
+                        <!-- JavaScript -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>JavaScript</span><span>85%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                
+                        <!-- React / React Native -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>React.js & React Native</span><span>70%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                
+                        <!-- TailwindCSS -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>Tailwind CSS</span><span>90%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- BACK-END -->
+                    <div class="stack__2 w-full md:w-1/2 bg-tertiare p-6 text-zinc-50 rounded-xl">
+                        <h4 class="text-zinc-100 text-2xl font-semibold mb-8 text-center">BACK-END</h4>
+                
+                        <!-- PHP -->
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>PHP</span><span>60%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                
+                        <!-- Node.js -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>Node.js (Express)</span><span>85%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                
+                        <!-- Python -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>Python</span><span>70%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                
+                        <!-- SQL -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>SQL (MySQL, PostgreSQL)</span><span>90%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                
+                        <!-- NoSQL -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-sm font-medium mb-1">
+                                <span>NoSQL (MongoDB)</span><span>85%</span>
+                            </div>
+                            <div class="w-full bg-zinc-700 rounded-full h-3">
+                                <div class="bg-accent h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stack__2 w-full space-y-6 md:w-1/2 bg-tertiare p-4 text-zinc-50 md:space-y-4 rounded-xl">
-                    <h4 class="subtitle text-zinc-100 text-xl md:text-2xl mb-8 max-w-3xl mx-auto">BACK-END</h4>
-                    <div class="1 flex justify-around">PHP  <progress value="6" max="10" class="bg-zinc-100 "></progress></div>
-                    <div class="1 flex justify-around">NODE.js(express)  <progress value="8.5" max="10"></progress></div>
-                    <div class="1 flex justify-around">python3  <progress value="7" max="10"></progress></div>
-                    <div class="1 flex justify-around">SQL(MySQL,PostgreSQL)  <progress value="9" max="10"></progress></div>
-                    <div class="1 flex justify-around">NoSQL(MongoDB)  <progress value="8.5" max="10"></progress></div>
-                </div>
-            </div>
+
             <div class="authers text-zinc-800 text-xl md:text-2xl mb-8 max-w-3xl mx-auto py-6">
                 Autres outils de travailles, Git, GitHub
             </div>
         </section>
         <!-- Projet Section -->
-        <section class="sec__3 bg-tertiare py-6 px-4 rounded-b-full" id="projet">
-            <h2 class="text-3xl font-bold text-zinc-100 mb-4 text-center">My Top Projet</h2>
+        <section class="sec__3 bg-tertiare py-6 px-4" id="projet">
+            <h2 class="text-3xl font-bold text-zinc-100 mb-4 text-center">Mes Projets</h2>
             <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-            <div class="articles flex flex-col md:flex-row items-center gap-8">
-                <div class="article w-full h-full">
-                    <img src="./img/image.jpg" alt="lawal.image" class="w-66 h-30 rounded-md shadow-lg">
-                    <h3 class="text-2xl font-bold text-zinc-100 my-4"><span class="md:text-tertiare">Projet name</span></h3>
-                    <p class="text-md text-zinc-50 md:text-xl mb-8 max-w-3xl mx-auto"><span class="md:text-tertiare">Lorem ipsum dolor </span>sit amet consectetur <span class="md:text-tertiare">adipisicing elit. Excep</span>turi impedit corporis <span class="md:text-tertiare">sint aspernatur nisi
-                    verita</span>tis tenetur iste qui<span class="md:text-tertiare"> officiis veniam atque placeat,</span> optio, natus <span class="md:text-tertiare">esse. Animi qui adipisci placeat e</span>os.</p>
-                    <p><a href="#" class="my__btn text-gray-200 hover:text-white md:text-gray-800 md:hover:text-black transition-all hover:underline">Visitez le site</a></p>
-                </div>
-                <div class="article w-full h-full">
-                    <img src="./img/image.jpg" alt="lawal.image" class="w-66 h-30 rounded-md shadow-lg">
-                    <h3 class="text-2xl font-bold text-zinc-100 my-4">Projet name</h3>
-                    <p class="text-md text-zinc-50 md:text-xl mb-8 max-w-3xl mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi impedit corporis sint aspernatur nisi
-                    veritatis tenetur iste qui officiis veniam atque placeat, optio, natus esse. Animi qui adipisci placeat eos.</p>
-                    <p><a href="#" class="my__btn text-gray-400 hover:text-white transition-all hover:underline">Visitez le site</a></p>
-                </div>
-                <div class="article w-full h-full">
-                    <img src="./img/image.jpg" alt="lawal.image" class="w-66 h-30 rounded-md shadow-lg">
-                    <h3 class="text-2xl font-bold text-zinc-100 my-4">Projet name</h3>
-                    <p class="text-md text-zinc-50 md:text-xl mb-8 max-w-3xl mx-auto">Lorem ipsum dolor sit amet <span class="md:text-tertiare">consectetur</span> adipisicing elit. Exceptur<span class="md:text-tertiare">i impedit corporis</span> sint aspernatur nisi
-                    v<span class="md:text-tertiare">eritatis tenetur iste qui</span> officiis veniam at<span class="md:text-tertiare">que placeat, optio, natus</span> esse. Animi <span class="md:text-tertiare">qui adipisci placeat eos.</span></p>
-                    <p><a href="#" class="my__btn text-gray-800 hover:text-black transition-all hover:underline">Visitez le site</a></p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"> <!-- Projet 1 : E-commerce -->
+                <div class="article bg-tertiare rounded-md shadow-md p-4"> <img src="./img/2.png" alt="Boutique en ligne"
+                        class="w-full h-auto rounded-md shadow-lg">
+                    <h3 class="text-xl font-bold text-zinc-100 my-4">Boutique en ligne (E-commerce)</h3>
+                    <p class="text-md text-zinc-50 mb-4"> Création d’un site e-commerce complet permettant la vente en ligne de
+                        produits. Le site intègre un catalogue, un panier d’achat, un module de paiement sécurisé, et une
+                        interface d’administration. </p>
+                    <p class="text-md text-zinc-50 mb-4"> <strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP,
+                        Stripe. </p>
+                    <p class="text-md text-zinc-50 mb-4"> <strong>Objectif :</strong> offrir une expérience d’achat fluide et
+                        responsive sur tous les supports. </p> <a href="#"
+                        class="my__btn text-zinc-50 hover:text-white transition-all hover:underline">Visitez le site</a>
+                </div> <!-- Projet 2 : Site vitrine nettoyage -->
+                <div class="article bg-tertiare rounded-md shadow-md p-4"> <img src="./img/cleaning.png"
+                        alt="Site agents de nettoyage" class="w-full h-auto rounded-md shadow-lg">
+                    <h3 class="text-xl font-bold text-zinc-100 my-4">Site vitrine - Agents de nettoyage</h3>
+                    <p class="text-md text-zinc-50 mb-4"> Développement d’un site vitrine pour une entreprise de nettoyage.
+                        Présentation des services, tarifs, zones d’intervention et formulaire de contact. </p>
+                    <p class="text-md text-zinc-50 mb-4"> <strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, carte
+                        interactive (Google Maps). </p>
+                    <p class="text-md text-zinc-50 mb-4"> <strong>Objectif :</strong> valoriser l’image professionnelle de
+                        l’entreprise et faciliter la prise de contact. </p> <a href="#"
+                        class="my__btn text-zinc-50 hover:text-white transition-all hover:underline">Visitez le site</a>
+                </div> <!-- Projet 3 : Streaming musical -->
+                <div class="article bg-tertiare rounded-md shadow-md p-4"> <img src="./img/musique.png"
+                        alt="App de streaming musical" class="w-full h-auto rounded-md shadow-lg">
+                    <h3 class="text-xl font-bold text-zinc-100 my-4">Application de streaming musical</h3>
+                    <p class="text-md text-zinc-50 mb-4"> Développement d’une application web de streaming musical permettant
+                        aux utilisateurs d’écouter des morceaux, de créer des playlists et de rechercher des artistes. </p>
+                    <p class="text-md text-zinc-50 mb-4"> <strong>Fonctionnalités :</strong> lecture audio, playlists, recherche
+                        dynamique, interface responsive. </p>
+                    <p class="text-md text-zinc-50 mb-4"> <strong>Technologies utilisées :</strong> React, HTML, CSS, API,
+                        Node.js, PostgreSQL. </p>
+                    <p class="text-md text-zinc-50 mb-4"> <strong>Objectif :</strong> offrir une plateforme moderne et intuitive
+                        pour écouter de la musique en ligne. </p> <a href="#"
+                        class="my__btn text-zinc-50 hover:text-white transition-all hover:underline">Visitez le site</a>
                 </div>
             </div>
         </section>
 
+        
         <!-- Contact Section -->
           <section class="bg-white py-16 px-4" id="contact">
         <div class="container mx-auto max-w-6xl">
@@ -278,5 +387,26 @@
         </div>
     </footer>
     <script src="./script/main.js"></script>
+    <script>
+        // Fonction pour observer l'apparition des barres à l'écran
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const targetWidth = bar.getAttribute('data-progress');
+                    bar.style.transition = "width 1.5s ease-in-out";
+                    bar.style.width = targetWidth + "%";
+                    observer.unobserve(bar); // ne pas répéter l'animation
+                }
+            });
+        }, {
+            threshold: 0.5 // se déclenche quand 50% de la barre est visible
+        });
+
+        // Sélection de toutes les barres avec la classe
+        const progressBars = document.querySelectorAll('.progress-bar');
+        progressBars.forEach(bar => observer.observe(bar));
+    </script>
+
 </body>
 </html>
