@@ -1,412 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Lawal- Rafiou</title>
+    <title>Portfolio — Lawal Rafiou</title>
     <script src="./script/tailwindcss-3.4.1.js"></script>
     <link rel="stylesheet" href="./style/fontawesome.all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/styles.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: 'rgba(17, 16, 16, 0.932)',
+                        primary: '#0a0a0f',
                         secondary: '#1e3a8a',
-                        tertiare: ' #24252A',
+                        tertiare: '#12121a',
                         accent: '#3b82f6',
+                        neon: '#00f5d4',
                     }
                 }
             }
         }
     </script>
-
 </head>
 <body>
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <div class="bg-zinc-50 text-white p-2 rounded-lg mr-3">
-                    <img src="./img/image2.jpg" alt="logo" class="size-6 rounded-lg logo">
-                </div>
-                <h1 class="text-2xl font-bold text-primary">Lawal <span class="text-secondary">Rafiou</span></h1>
+
+    <div class="scroller"></div>
+
+    <!-- HEADER -->
+    <header id="main-header">
+        <div class="header-inner">
+            <div class="flex items-center gap-3">
+                <img src="./img/image2.jpg" alt="logo" class="w-8 h-8 rounded-lg object-cover">
+                <span class="logo-text">LR<span class="text-neon">.</span></span>
             </div>
-    
-            <!-- Navigation Mobile Button -->
-            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-    
-            <!-- Navigation Desktop -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#" class="text-primary font-semibold hover:text-accent transition-all">Accueil</a>
-                <a href="#projet" class="text-gray-600 hover:text-accent transition-all">Blog</a>
-                <a href="#stack" class="text-gray-600 hover:text-accent transition-all">Stack</a>
-                <a href="#contact" class="text-gray-600 hover:text-accent transition-all">Contact</a>
+            <nav class="desktop-nav">
+                <a href="#" class="nav-link">Accueil</a>
+                <a href="#projet" class="nav-link">Projets</a>
+                <a href="#stack" class="nav-link">Stack</a>
+                <a href="#contact" class="nav-link contact-cta">Contact</a>
             </nav>
+            <button id="mobile-menu-button" class="burger-btn">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
-            <a href="#" class="block py-2 text-primary font-semibold">Accueil</a>
-            <a href="#projet" class="block py-2 text-gray-600 hover:text-accent">Blog</a>
-            <a href="#stack" class="block py-2 text-gray-600 hover:text-accent">Stack</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-accent">Contact</a>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#" class="mobile-link">Accueil</a>
+            <a href="#projet" class="mobile-link">Projets</a>
+            <a href="#stack" class="mobile-link">Stack</a>
+            <a href="#contact" class="mobile-link">Contact</a>
         </div>
     </header>
 
-    <div class="scroller"></div>
-    <div>
-        <!-- Banier -->
-         <section class="bg-primary text-white py-24 md:py-32 px-12 flex justify-between items-center flex-wrap md:w-full">
-            <div class="image w-full md:w-1/2">
-                <img src="./img/image.png" alt="lawal.image" class="w-full md:w-96 h-auto object-cover">
-            </div>
-            <div class="right__div md:w-1/2">
-                <div id="divToChange">
-                    <h1 class="title text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Lawal <span class="text-secondary">Rafiou</span>
-                    </h1>
-                    <h3 class="subtitle text-md md:text-3xl font-bold mb-6 animate-fade-in">Développeur Web Full-Stack && API RestFull</h3>
-                    <p class="intro text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                        Développeur web Full‑Stack, spécialisé dans la création
-                        d’applications robustes et modernes , doté d'une solide
-                        formation en développement web acquise à Pointe-Noire.
-                        Capable de concevoir, développer et maintenir des applications
-                        web performantes en utilisant les technologies front-end et
-                        back-end les plus récentes
-                    </p>
+    <!-- HERO -->
+    <section class="hero-section">
+        <div class="hero-bg-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="available-badge">
+                    <span class="badge-dot"></span> Disponible pour de nouveaux projets
                 </div>
-                <div id="divToCome" class="hidden">
-                    <h1 class="title text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Lawal <span class="text-secondary">Rafiou</span>
-                    </h1>
-                    <h3 class="subtitle text-md md:text-3xl font-bold mb-6 animate-fade-in">Développeur Web Full-Stack && API RestFull</h3>
-                    <p class="intro text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                        Plus d'information
-                    </p>
+                <h1 class="hero-title">Lawal <span class="name-accent">Rafiou</span></h1>
+                <h3 class="hero-subtitle">
+                    Je suis <span id="typewriter-text"></span><span class="tw-cursor">|</span>
+                </h3>
+                <p class="hero-intro">
+                    Développeur web Full‑Stack, spécialisé dans la création d'applications robustes et modernes, 
+                    doté d'une solide formation acquise à Pointe-Noire.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projet" class="btn-primary">Voir mes projets <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-ghost">Me contacter</a>
                 </div>
-                <button type="button" id="changeBtn" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">En savoir plus</button>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-n">3+</span><span class="stat-l">Ans d'exp.</span></div>
+                    <div class="stat-sep"></div>
+                    <div class="stat"><span class="stat-n">10+</span><span class="stat-l">Projets</span></div>
+                    <div class="stat-sep"></div>
+                    <div class="stat"><span class="stat-n">5+</span><span class="stat-l">Technologies</span></div>
+                </div>
             </div>
-        </section>
-         <!-- Skill section -->
-        <section class="sec__2 py-16 bg-gray-50" id="stack">
-            <h2 class="skill text-3xl font-bold text-primary mb-4 text-center">Mes Stacks</h2>
-            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-                <div class="stack__div flex flex-col md:flex-row gap-8 p-4">
-                    <!-- FRONT-END -->
-                    <div class="stack__1 w-full md:w-1/2 bg-tertiare p-6 text-zinc-50 rounded-xl">
-                        <h4 class="text-zinc-100 text-2xl font-semibold mb-8 text-center">FRONT-END</h4>
-                
-                        <!-- HTML5 -->
-                        <div>
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>HTML5</span><span>95%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="95"></div>
-                            </div>
-                        </div>
-                
-                        <!-- CSS3 -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>CSS3</span><span>95%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar"style="width: 0%" data-progress="95"></div>
-                            </div>
-                        </div>
-                
-                        <!-- JavaScript -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>JavaScript</span><span>85%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="85"></div>
-                            </div>
-                        </div>
-                
-                        <!-- React / React Native -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>React.js & React Native</span><span>70%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="70"></div>
-                            </div>
-                        </div>
-                
-                        <!-- TailwindCSS -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>Tailwind CSS</span><span>90%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="90"></div>
-                            </div>
-                        </div>
+            <div class="hero-photo-zone">
+                <div class="photo-frame">
+                    <img src="./img/image.png" alt="Lawal Rafiou" class="hero-img">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="float-tag tag-top"><i class="fas fa-code"></i> Full-Stack</div>
+                    <div class="float-tag tag-bot"><i class="fas fa-server"></i> API RESTful</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint"><div class="scroll-dot-anim"></div></div>
+    </section>
+
+    <!-- STACK -->
+    <section class="stack-section" id="stack">
+        <div class="section-wrap">
+            <div class="section-head reveal">
+                <span class="tag-label">Compétences</span>
+                <h2 class="sec-title">Mon <span class="accent-word">Stack</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid reveal">
+                <!-- FRONT -->
+                <div class="skill-card">
+                    <div class="card-header">
+                        <div class="card-icon front-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h4>Front-End</h4>
                     </div>
-                
-                    <!-- BACK-END -->
-                    <div class="stack__2 w-full md:w-1/2 bg-tertiare p-6 text-zinc-50 rounded-xl">
-                        <h4 class="text-zinc-100 text-2xl font-semibold mb-8 text-center">BACK-END</h4>
-                
-                        <!-- PHP -->
-                        <div>
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>PHP</span><span>60%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="60"></div>
-                            </div>
+                    <div class="skill-row"><div class="sk-info"><span>HTML5</span><span>95%</span></div><div class="sk-bar"><div class="sk-fill" data-p="95"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>CSS3</span><span>95%</span></div><div class="sk-bar"><div class="sk-fill" data-p="95"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>JavaScript</span><span>85%</span></div><div class="sk-bar"><div class="sk-fill" data-p="85"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>React.js & React Native</span><span>70%</span></div><div class="sk-bar"><div class="sk-fill" data-p="70"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>Tailwind CSS</span><span>90%</span></div><div class="sk-bar"><div class="sk-fill" data-p="90"></div></div></div>
+                </div>
+                <!-- BACK -->
+                <div class="skill-card">
+                    <div class="card-header">
+                        <div class="card-icon back-icon"><i class="fas fa-server"></i></div>
+                        <h4>Back-End</h4>
+                    </div>
+                    <div class="skill-row"><div class="sk-info"><span>Node.js (Express)</span><span>85%</span></div><div class="sk-bar"><div class="sk-fill" data-p="85"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>PHP</span><span>60%</span></div><div class="sk-bar"><div class="sk-fill" data-p="60"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>Python</span><span>70%</span></div><div class="sk-bar"><div class="sk-fill" data-p="70"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>SQL (MySQL, PostgreSQL)</span><span>90%</span></div><div class="sk-bar"><div class="sk-fill" data-p="90"></div></div></div>
+                    <div class="skill-row"><div class="sk-info"><span>NoSQL (MongoDB)</span><span>85%</span></div><div class="sk-bar"><div class="sk-fill" data-p="85"></div></div></div>
+                </div>
+            </div>
+            <div class="tools-row reveal">
+                <span class="tools-label">Autres :</span>
+                <div class="tool-chip"><i class="fab fa-git-alt"></i> Git</div>
+                <div class="tool-chip"><i class="fab fa-github"></i> GitHub</div>
+                <div class="tool-chip"><i class="fas fa-cloud"></i> REST API</div>
+                <div class="tool-chip"><i class="fab fa-docker"></i> Docker</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="projects-section" id="projet">
+        <div class="section-wrap">
+            <div class="section-head reveal">
+                <span class="tag-label">Mon travail</span>
+                <h2 class="sec-title">Mes <span class="accent-word">Projets</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid">
+
+                <div class="proj-card reveal">
+                    <div class="proj-img-wrap">
+                        <img src="./img/2.png" alt="E-commerce" class="proj-img">
+                        <div class="proj-overlay">
+                            <a href="https://github.com/Raf-14/E-commerce" target="_blank" class="proj-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
-                
-                        <!-- Node.js -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>Node.js (Express)</span><span>85%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="85"></div>
-                            </div>
-                        </div>
-                
-                        <!-- Python -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>Python</span><span>70%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="70"></div>
-                            </div>
-                        </div>
-                
-                        <!-- SQL -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>SQL (MySQL, PostgreSQL)</span><span>90%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="90"></div>
-                            </div>
-                        </div>
-                
-                        <!-- NoSQL -->
-                        <div class="mt-4">
-                            <div class="flex justify-between text-sm font-medium mb-1">
-                                <span>NoSQL (MongoDB)</span><span>85%</span>
-                            </div>
-                            <div class="w-full bg-zinc-700 rounded-full h-3">
-                                <div class="bg-accent h-3 rounded-full progress-bar" style="width: 0%" data-progress="85"></div>
-                            </div>
-                        </div>
+                        <span class="proj-badge">E-commerce</span>
+                    </div>
+                    <div class="proj-body">
+                        <h3>Boutique en ligne</h3>
+                        <p>Site e-commerce complet avec catalogue, panier, paiement Stripe et interface d'administration.</p>
+                        <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span><span>Stripe</span></div>
                     </div>
                 </div>
 
-            <div class="authers text-zinc-800 text-xl md:text-2xl mb-8 max-w-3xl mx-auto py-6">
-                Autres outils de travailles, Git, GitHub
-            </div>
-        </section>
-        <!-- Projet Section -->
-        <section class="sec__3 bg-tertiare py-6 px-4" id="projet">
-            <h2 class="text-3xl font-bold text-zinc-100 mb-4 text-center">Mes Projets</h2>
-            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"> <!-- Projet 1 : E-commerce -->
-                <div class="article bg-tertiare rounded-md shadow-md p-4"> <img src="./img/2.png" alt="Boutique en ligne"
-                        class="w-full h-auto rounded-md shadow-lg">
-                    <h3 class="text-xl font-bold text-zinc-100 my-4">Boutique en ligne (E-commerce)</h3>
-                    <p class="text-md text-zinc-50 mb-4"> Création d’un site e-commerce complet permettant la vente en ligne de
-                        produits. Le site intègre un catalogue, un panier d’achat, un module de paiement sécurisé, et une
-                        interface d’administration. </p>
-                    <p class="text-md text-zinc-50 mb-4"> <strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP,
-                        Stripe. </p>
-                    <p class="text-md text-zinc-50 mb-4"> <strong>Objectif :</strong> offrir une expérience d’achat fluide et
-                        responsive sur tous les supports. </p> <a href="https://github.com/Raf-14/E-commerce" target="_blank"
-                        class="my__btn text-zinc-50 hover:text-white transition-all hover:underline">Visitez le site</a>
-                </div> <!-- Projet 2 : Site vitrine nettoyage -->
-                <div class="article bg-tertiare rounded-md shadow-md p-4"> <img src="./img/cleaning.png"
-                        alt="Site agents de nettoyage" class="w-full h-auto rounded-md shadow-lg">
-                    <h3 class="text-xl font-bold text-zinc-100 my-4">Site vitrine - Agents de nettoyage</h3>
-                    <p class="text-md text-zinc-50 mb-4"> Développement d’un site vitrine pour une entreprise de nettoyage.
-                        Présentation des services, tarifs, zones d’intervention et formulaire de contact. </p>
-                    <p class="text-md text-zinc-50 mb-4"> <strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, carte
-                        interactive (Google Maps). </p>
-                    <p class="text-md text-zinc-50 mb-4"> <strong>Objectif :</strong> valoriser l’image professionnelle de
-                        l’entreprise et faciliter la prise de contact. </p> <a href="https://agentdenetoyage.netlify.app/" target="_blank"
-                        class="my__btn text-zinc-50 hover:text-white transition-all hover:underline">Visitez le site</a>
-                </div> <!-- Projet 3 : Streaming musical -->
-                <div class="article bg-tertiare rounded-md shadow-md p-4"> <img src="./img/musique.png"
-                        alt="App de streaming musical" class="w-full h-auto rounded-md shadow-lg">
-                    <h3 class="text-xl font-bold text-zinc-100 my-4">Application de streaming musical</h3>
-                    <p class="text-md text-zinc-50 mb-4"> Développement d’une application web de streaming musical permettant
-                        aux utilisateurs d’écouter des morceaux, de créer des playlists et de rechercher des artistes. </p>
-                    <p class="text-md text-zinc-50 mb-4"> <strong>Fonctionnalités :</strong> lecture audio, playlists, recherche
-                        dynamique, interface responsive. </p>
-                    <p class="text-md text-zinc-50 mb-4"> <strong>Technologies utilisées :</strong> React, HTML, CSS, API,
-                        Node.js, PostgreSQL. </p>
-                    <p class="text-md text-zinc-50 mb-4"> <strong>Objectif :</strong> offrir une plateforme moderne et intuitive
-                        pour écouter de la musique en ligne. </p> <a href="https://github.com/Raf-14/straiming" target="_blank"
-                        class="my__btn text-zinc-50 hover:text-white transition-all hover:underline">Visitez le site</a>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- Contact Section -->
-        <section class="bg-white py-16 px-4" id="contact">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold text-center text-blue-600">Me Contactez</h2>
-            <div class="w-20 h-1 bg-accent mx-auto mb-12"></div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Info -->
-                <div>
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Mes coordonnées</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
-                                <p>Avenue de la Révolution à Pointe Noire, Congo Brazzaville</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-blue-500 mr-3"></i>
-                                <p>053330615 / 040481892</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-envelope text-blue-500 mr-3"></i>
-                                <p>lrafiou491@gmail.com</p>
-                            </div>
+                <div class="proj-card reveal">
+                    <div class="proj-img-wrap">
+                        <img src="./img/cleaning.png" alt="Nettoyage" class="proj-img">
+                        <div class="proj-overlay">
+                            <a href="https://agentdenetoyage.netlify.app/" target="_blank" class="proj-btn"><i class="fas fa-external-link-alt"></i> Voir le site</a>
                         </div>
+                        <span class="proj-badge">Site vitrine</span>
                     </div>
-
-                    <!-- Google Map -->
-                    <div class="h-64 rounded-lg overflow-hidden shadow-md">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.858370079287475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
+                    <div class="proj-body">
+                        <h3>Agents de Nettoyage</h3>
+                        <p>Site vitrine pour entreprise de nettoyage avec services, tarifs et formulaire de contact.</p>
+                        <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>Google Maps</span></div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Envoyez-nous un message</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-gray-700 mb-1">Nom complet</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                <div class="proj-card reveal">
+                    <div class="proj-img-wrap">
+                        <img src="./img/musique.png" alt="Streaming" class="proj-img">
+                        <div class="proj-overlay">
+                            <a href="https://github.com/Raf-14/straiming" target="_blank" class="proj-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 mb-1">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-1">Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-                        </div>
-                        <button type="submit" class="bg-transparent border-2 border-tertiare hover:bg-tertiare hover:text-zinc-50 text-zinc-800 font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">
-                            Envoyer
-                        </button>
-                        
+                        <span class="proj-badge">Web App</span>
+                    </div>
+                    <div class="proj-body">
+                        <h3>Streaming Musical</h3>
+                        <p>Application de streaming avec lecture audio, playlists et recherche dynamique.</p>
+                        <div class="tech-stack"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>API</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="section-wrap">
+            <div class="section-head reveal">
+                <span class="tag-label">Travailler ensemble</span>
+                <h2 class="sec-title">Me <span class="accent-word">Contacter</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left reveal">
+                    <p class="contact-intro">Vous avez un projet ? Je suis disponible pour de nouvelles opportunités.</p>
+                    <div class="c-items">
+                        <div class="c-item"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><div><span class="c-label">Localisation</span><span class="c-val">Pointe-Noire, Congo Brazzaville</span></div></div>
+                        <div class="c-item"><div class="c-icon"><i class="fas fa-phone-alt"></i></div><div><span class="c-label">Téléphone</span><span class="c-val">053330615 / 040481892</span></div></div>
+                        <div class="c-item"><div class="c-icon"><i class="fas fa-envelope"></i></div><div><span class="c-label">Email</span><span class="c-val">lrafiou491@gmail.com</span></div></div>
+                    </div>
+                    <div class="socials">
+                        <a href="#" class="soc-btn"><i class="fab fa-github"></i></a>
+                        <a href="#" class="soc-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="soc-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right reveal">
+                    <form class="c-form">
+                        <div class="f-group"><label>Nom complet</label><input type="text" placeholder="Votre nom"></div>
+                        <div class="f-group"><label>Email</label><input type="email" placeholder="votre@email.com"></div>
+                        <div class="f-group"><label>Message</label><textarea rows="5" placeholder="Décrivez votre projet..."></textarea></div>
+                        <button type="submit" class="f-submit">Envoyer <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
         </div>
-        </section>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-tertiare text-white py-12 rounded-3xl">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Logo and description -->
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
                 <div>
-                    <div class="flex items-center mb-4">
-                        <div class="bg-white text-primary p-2 rounded-lg mr-3">
-                            <i class="fas fa-network-wired text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold">Lawal Rafiou</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="./img/image2.jpg" alt="logo" class="w-8 h-8 rounded-lg object-cover">
+                        <span class="logo-text">LR<span class="text-neon">.</span></span>
                     </div>
-                    <p class="text-gray-400">Experts en solutions intégrées informatiques .</p>
+                    <p>Expert en solutions intégrées informatiques.</p>
                 </div>
-    
-                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4"> Autres Liens</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">GitHub</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">E-commerce App(Proto)</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">X</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Meta</a></li>
-                    </ul>
+                    <h4>Navigation</h4>
+                    <ul><li><a href="#">Accueil</a></li><li><a href="#projet">Projets</a></li><li><a href="#stack">Stack</a></li><li><a href="#contact">Contact</a></li></ul>
                 </div>
-    
-                <!-- Services -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Solutions IT</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Développement Mobile, Web</a>
-                        </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Formation web</a></li>
-                    </ul>
+                    <h4>Services</h4>
+                    <ul><li><a href="#">Solutions IT</a></li><li><a href="#">Développement Web & Mobile</a></li><li><a href="#">Formation web</a></li></ul>
                 </div>
-    
-                <!-- Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <address class="not-italic text-gray-400">
-                        <div class="flex items-start mb-3">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
-                            <p>Avenue de la Révolution à Pointe Noire<br>Congo Brazzaville</p>
-                        </div>
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-phone-alt mr-3 text-accent"></i>
-                            <p>053330615</p>
-                        </div>
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-whatsapp-square mr-3 text-accent"></i>
-                            <p>040481892</p>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-accent"></i>
-                            <p>lrafiou491@gmail.com</p>
-                        </div>
-                    </address>
+                    <h4>Contact</h4>
+                    <ul><li><a href="#">lrafiou491@gmail.com</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li></ul>
                 </div>
             </div>
-    
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2023 CV éléctronique. Tous droits réservés.</p>
+            <div class="footer-bottom">
+                <p>© 2025 Lawal Rafiou — Tous droits réservés.</p>
+                <p>Fait avec <span style="color:#00f5d4">♥</span> à Pointe-Noire</p>
             </div>
         </div>
     </footer>
+
     <script src="./script/main.js"></script>
-    <script>
-        // Fonction pour observer l'apparition des barres à l'écran
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const bar = entry.target;
-                    const targetWidth = bar.getAttribute('data-progress');
-                    bar.style.transition = "width 1.5s ease-in-out";
-                    bar.style.width = targetWidth + "%";
-                    observer.unobserve(bar); // ne pas répéter l'animation
-                }
-            });
-        }, {
-            threshold: 0.5 // se déclenche quand 50% de la barre est visible
-        });
-
-        // Sélection de toutes les barres avec la classe
-        const progressBars = document.querySelectorAll('.progress-bar');
-        progressBars.forEach(bar => observer.observe(bar));
-    </script>
-
+    <script src="./script/animations.js"></script>
 </body>
 </html>
